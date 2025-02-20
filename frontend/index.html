@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Reviewer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #code-input {
+            width: 800px;
+            height: 300px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+        #analyze-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        #analyze-btn:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            width: 800px;
+        }
+        #results h2 {
+            text-align: center;
+        }
+        #results div {
+            text-align: left;
+            margin-top: 10px;
+        }
+        #loader {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Code Reviewer</h1>
+        <textarea id="code-input" placeholder="Paste your Python code here..."></textarea>
+        <button id="analyze-btn">Analyze Code</button>
+        <div id="loader" style="display:none;">Analyzing...</div>
+        <div id="results" style="display:none;">
+            <h2>Results</h2>
+            <div id="best-practices"></div>
+            <div id="linter-results"></div>
+            <div id="ml-results"></div>
+            <div id="security-results"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
